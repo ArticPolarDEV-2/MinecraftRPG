@@ -1,11 +1,18 @@
-import express from 'express';
-const app = express();
-const port = 3000;
+import { Client, GatewayIntentBits } from 'discord.js';
+import 'dotenv/config';
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
+const client = new Client({
+  intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages]
 });
 
-app.listen(port, () => {
-  return console.log(`Express is listening at http://localhost:${port}`);
+client.once("ready", () => {
+  console.log("Bot is online!");
 });
+
+client.on('messageCreate', (message) => {
+  if (message.content === '!ping') {
+    message.reply('🏓 Pong!');
+  }
+});
+
+client.login(process.env.TOKEN);
