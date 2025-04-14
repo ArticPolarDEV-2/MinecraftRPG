@@ -1,8 +1,10 @@
 {
     "name": "minecraftrpg",
     "version": "1.0.0",
-    "main": "src/app.ts",
+    "main": "dist/app.js",
     "scripts": {
+      "start": "tsc && node dist/app.js",
+      "lint": "eslint . --ext .ts",
       "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
@@ -10,10 +12,14 @@
     "license": "MIT",
     "description": "Bot do Discord integrado com o Minecraft para ações de RPG dentro do Jogo",
     "devDependencies": {
-      "@types/express": "^4.17.1",
-      "typescript": "^5.8.3"
+        "@eslint/js": "^9.24.0",
+        "@types/express": "^4.17.1",
+        "eslint": "^9.24.0",
+        "globals": "^16.0.0",
+        "typescript": "^5.8.3",
+        "typescript-eslint": "^8.29.1"
     },
     "dependencies": {
-      "express": "^4.17.1"
+        "express": "^4.17.1"
     }
 }
