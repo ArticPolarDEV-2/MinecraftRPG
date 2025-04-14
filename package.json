@@ -1,0 +1,12 @@
+{
+    "name": "minecraftrpg",
+    "version": "1.0.0",
+    "main": "src/app.ts",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "ArticPolarDEV",
+    "license": "MIT",
+    "description": "Bot do Discord integrado com o Minecraft para ações de RPG dentro do Jogo"
+  }
